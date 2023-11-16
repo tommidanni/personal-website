@@ -1,0 +1,260 @@
+
+
+body {
+    font-family: Varela Round; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    line-height: 1.8;
+    overflow-x: hidden;
+
+    width: 100vw;
+    height:100vh;    
+    background-image: url('../img/background_1.png'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align:center;
+    overflow: auto;
+}
+
+body::after {
+    content: url('../img/background_2.png');
+    display: none;
+}
+
+
+
+
+/*-----------------------NAVIGATION BAR SECTION --------------------*/
+
+
+nav{
+    float:right;
+    padding:20px;
+}
+
+a {
+text-decoration: none;
+}
+
+nav {
+font-family: monospace;
+}
+
+ul {
+list-style: none;
+}
+
+li {
+color: #fff;
+display: block;
+float: left;
+padding:1rem;
+
+}
+
+li:hover {
+cursor: pointer;
+
+}
+
+.link-icon{
+    width:20px;
+    height:20px;
+}
+
+#link-icon{
+    width:30px;
+    height:30px;
+    margin:10px;
+}
+
+
+
+
+/*----------------------- LEFT ICON SECTION ------------------------*/
+
+.icone-section{
+    float:left;
+    margin-top: 1.5%;
+    margin-left:1.5%;
+    width:18%;
+    text-align:center;
+    position:fixed  ;
+    top:0;
+}
+
+.circular--icon { 
+    position: relative; 
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 50%;
+    text-align:center;
+    display:block; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+
+} 
+
+.circular--icon img { 
+    width: 100%;
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
+.nav-button{
+    margin-bottom:50px;
+   
+
+}
+
+
+.icon{
+    position:relative;
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    opacity: 90%;
+    transition: opacity 0.3 s; 
+    
+}
+.red{
+    background:linear-gradient(to right bottom, #f05757, #c90e0e);
+}
+
+.green{
+    background:linear-gradient(to right bottom, #b1f37a,#40df10);
+}
+
+.yellow{
+    background-color:#f7cb0a;
+    background:linear-gradient(to right bottom, rgb(247, 247, 134),rgb(255, 217, 0));
+}
+
+.side-desc{
+    display:inline-block;
+    overflow:hidden;
+    width:0;
+    transition: width 0.1s;
+    white-space: pre;
+    color:#fff;
+    font-weight:bold;
+}
+
+.icon:hover{
+    opacity:100%;
+
+}
+
+.thumbnail {  
+    z-index:999; 
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.1s; 
+    -webkit-transition-timing-function: ease;
+}
+    
+    /*change the number below to scale to the appropriate size*/ 
+.thumbnail:hover { 
+    transform: scale(1.05); 
+}
+
+/*----------------------- CONTENT SECTION ------------------------*/
+
+.content-section{
+    float:right;
+    margin-left:20vw;
+    margin-right:20vw;
+    width:55%;
+    text-align:left;
+    position:relative;
+}
+
+
+.content-section h1{
+    margin-top:20px;
+    color:#fff;
+    font-weight:900;
+    font-size:4.5rem;
+    letter-spacing: 2px;
+    text-align:left;
+
+}
+
+.content-section p{
+    color:#fff
+}
+
+.portofolio-item{
+    border-top:#f7cb0a 2px dashed;
+    border-bottom:#f7cb0a 2px dashed;
+    padding:20px;
+}
+
+.portofolio-item:first-child{
+    border-top:none;
+    margin-top:10px;
+}
+
+
+.portofolio-item:last-child{
+    border-bottom:none;
+}
+
+.portofolio-item p{
+    font-size:large; 
+    font-weight:bold;  
+}
+
+.site-desc{
+    display:none;
+    width:100%;
+    border-radius:4px;
+    background-color:rgba(23, 117, 117, 0.459);
+}
+
+.site-desc p{
+    font-size:medium;
+    font-weight:400;
+}
+
+
+.slide-btn{
+    background-color: transparent;
+    border: none;
+    color:#fff;
+    float: right;
+    font-size:large;
+    font-weight:bold;
+    
+}
+
+.slide-btn:focus{
+    outline:none;
+}
+
+
+.page-description{
+    color:#fff;
+    padding-top:20px;
+    font-size:larger;
+}
+
+/*------------------- CONTROL PANEL -------------------------*/
+
+.control-panel{
+    border:1px solid;
+    border-radius:20px;
+}
+
+
+
+
+/*.webp .background { background-image: url('../img/background_1.webp'); }
+.old .background  { background-image: url('../img/background_1.jpeg'); }*/

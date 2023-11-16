@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+	{% block content %}
+
+		<div class="content-section">	
+			<h1>Contact</h1>
+			<div class="container">
+				<div class="row page-description">
+					<div class="col">
+						You can send me an e-mail, send me a 
+						private message on Linkedin or fill up the following form.
+					</div>
+				</div>
+				<div class="row page-description">
+					<div class="col">
+						<img src ="{{url_for('static', filename='img/mail.png')}}"class="d-inline">
+						<p class="d-inline">tdaniel.webdev@gmail.com</p>
+					</div>
+					<div class="col">	
+						<a  href="#"><img class="link-icon" src="{{url_for('static', filename='img/linkedin.png')}}"></a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endblock %}

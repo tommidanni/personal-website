@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+	{% block content %}
+
+	<div class="content-section">
+		<h1>Portofolio</h1>
+		<div class="container">
+			<div class="row page-description">
+				<div class="col">
+
+					<p class="d-inline">All the source code is available on my GitHub page :</p><a href="#" class="d-inline"><img id="link-icon" src="{{url_for('static', filename='img/git.png')}}"></a>
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="portofolio-item">
+				<div class="row">
+
+					<div class="col">
+						<p>E-commerce application</p>
+					</div>
+					<div class="col">
+						<button class="slide-btn">+</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-11 site-desc">
+						<p>descritpion of the site</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portofolio-item">
+				<div class="row">
+					<div class="col">
+						<p>Landing page</p>
+					</div>
+					<div class="col">
+						<button class="slide-btn">+</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-11 site-desc">
+						<p>descritpion of the site</p>
+					</div>
+				</div>	
+			</div>
+
+			<div class="portofolio-item">
+
+				<div class="row">
+					<div class="col">
+						<p>This site</p>
+					</div>
+					<div class="col">
+						<button class="slide-btn">+</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-11 site-desc">
+						<p>descritpion of the site</p>
+					</div>
+				</div>
+
+			</div>	
+		</div> 
+	</div>
+	{% endblock %}

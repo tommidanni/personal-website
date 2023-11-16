@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Thomas Daniel</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/favicon.png')}}">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <!-- main -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+	<!-- font -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+</head>
+<body>
+					
+					<nav role="navigation">	
+						<ul>
+							<li><a href="#"><img class="link-icon" src="{{url_for('static', filename='img/git.png')}}"></a></li>
+							<li><a href="#"><img class="link-icon" src="{{url_for('static', filename='img/linkedin.png')}}"></a></li>
+						</ul>
+					</nav>
+		
+
+			<div class="icone-section">
+					<div class="container">
+						<div class="row nav-button">
+							<div class="col circular--icon thumbnail" id="my-face">
+								<a href="{{url_for('index')}}" class="stretched-link"><img src="{{url_for('static', filename='img/face.png')}}"></a>			
+							</div>
+							
+						</div>
+		
+						<div class="row nav-button">
+							<div class="col-4 offset-4 icon thumbnail red">
+								<a href="{{url_for('portofolio')}}" class="stretched-link"></a>
+							</div>
+							<div class="col-4 my-auto">
+								<span class="side-desc">Portofolio</span>
+							</div>
+						</div>
+	
+						<div class="row nav-button">
+							<div class="col-4 offset-4 icon thumbnail yellow">
+								<a href="{{url_for('about')}}" class="stretched-link"></a>
+							</div>
+							<div class="col-4 my-auto">
+								<span class="side-desc">About me</span>
+							</div>
+						</div>
+
+						<div class="row nav-button">
+							<div class="col-4 offset-4 icon thumbnail green">
+								<a href="{{url_for('contact')}}" class="stretched-link"></a>
+							</div>
+							<div class="col-4 my-auto">
+								<span class="side-desc">Contact</span>
+							</div>
+						</div>
+						
+					</div>
+			</div>
+				
+            {% block content %}
+            {% endblock %}
+
+		<!-- jquery js -->
+		<script src="{{url_for('static', filename='js/jquery-3.7.11.js')}}"></script>	
+		<!-- main js-->
+		<script src="{{url_for('static', filename='js/main.js')}}"></script>	
+		<!-- image js -->
+		<script src="{{url_for('static', filename='js/image.js')}}"></script>	
+		<!--face animation js-->
+		<script src="{{url_for('static', filename='js/face.js')}}"></script>	
+
+</body>
+
+</html>
