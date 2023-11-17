@@ -1,25 +1,39 @@
 {% extends "base.html" %}
+	
+	{% block title %}Contact{% endblock %}
 	{% block content %}
+	
 
-		<div class="content-section">	
+	<div class="row title">
+		<div class="col-12">
 			<h1>Contact</h1>
-			<div class="container">
+		</div>
+	</div>
 				<div class="row page-description">
-					<div class="col">
-						You can send me an e-mail, send me a 
-						private message on Linkedin or fill up the following form.
+					<div class="col-12">
+						<p class="desc-content">You can contact me by e-mail, via LinkedIn or directly on this website.</p> 
 					</div>
-				</div>
-				<div class="row page-description">
-					<div class="col">
-						<img src ="{{url_for('static', filename='img/mail.png')}}"class="d-inline">
+					<div class="col-md-auto">
+						<img src ="{{url_for('static', filename='img/mail_icon.png')}}"class="d-inline" id="link-icon">
 						<p class="d-inline">tdaniel.webdev@gmail.com</p>
 					</div>
-					<div class="col">	
-						<a  href="#"><img class="link-icon" src="{{url_for('static', filename='img/linkedin.png')}}"></a></li>
+					<div class="col-md-auto" >	
+						<a  class="d-inline " href="#"><img class="link-icon" src="{{url_for('static', filename='img/full_linkedin.png')}}" ></a></li>
 					</div>
 				</div>
-			</div>
-		</div>
+
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<input  class="form-control" placeholder="Your email adress">
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="What do you need ?"></textarea>
+								<button type="submit" class="btn btn-primary">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+					
+
 
 	{% endblock %}

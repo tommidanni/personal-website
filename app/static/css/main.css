@@ -1,14 +1,14 @@
 
 
 body {
-    font-family: Varela Round; 
+    font-family: Verdana, sans-serif;
     font-style: normal; 
     font-variant: normal; 
     font-weight: 700; 
-    line-height: 26.4px;
-    line-height: 1.8;
+    font-size: 16px;
     overflow-x: hidden;
 
+    overflow: hidden;
     width: 100vw;
     height:100vh;    
     background-image: url('../img/background_1.png'); 
@@ -25,104 +25,103 @@ body::after {
     display: none;
 }
 
+h1{
+    margin-top:10px;
+    color:#fff;
+    font-weight:700;
+    font-size:3.5rem;
+    text-align:left;
 
+}
 
-
+p{
+    color:#fff;
+}
 /*-----------------------NAVIGATION BAR SECTION --------------------*/
 
 
-nav{
-    float:right;
-    padding:20px;
+.nav-icon{
+    margin-top:8px;
+    margin-right:8px;
 }
 
 a {
-text-decoration: none;
-}
-
-nav {
-font-family: monospace;
-}
-
-ul {
-list-style: none;
-}
-
-li {
-color: #fff;
-display: block;
-float: left;
-padding:1rem;
-
-}
-
-li:hover {
-cursor: pointer;
-
+    text-decoration: none;
 }
 
 .link-icon{
-    width:20px;
+    width:auto;
     height:20px;
-}
-
-#link-icon{
-    width:30px;
-    height:30px;
     margin:10px;
 }
 
 
+#link-icon{
+    width:auto;
+    height:1.5rem ;
+    margin-left:10px;   
+}
 
+.icon-white{
+    color:white;
+}
 
 /*----------------------- LEFT ICON SECTION ------------------------*/
 
-.icone-section{
-    float:left;
-    margin-top: 1.5%;
-    margin-left:1.5%;
-    width:18%;
-    text-align:center;
-    position:fixed  ;
-    top:0;
+@media (max-width: 768px) {
+    .icon-section {
+      height: 100vh; /* Set height to match the viewport height */
+      position: fixed;
+      top: 0;
+      left: -1000px; /* Initial position outside the viewport */
+      background-color: #1689b6c4; /* Set your desired background color */
+      overflow-y: auto; /* Enable vertical scrolling if needed */
+      transition: right 0.3s ease; /* Apply smooth transition for sliding effect */
+      z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+      padding:5vh;
+    }
+
+    .icon-section.visible{
+        left:0px;
+    }
 }
 
-.circular--icon { 
-    position: relative; 
-    width: 150px; 
-    height: 150px; 
-    overflow: hidden;
-    border-radius: 50%;
-    text-align:center;
-    display:block; 
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
+.navbar-toggle{
+    background-color:transparent;
+    border:none;
+}
 
-} 
 
-.circular--icon img { 
-    width: 100%;
+
+.face img { 
+    width: 28vh; 
+    height: 28vh; 
+    display:block;
     height: auto;
     display:block;
-    margin:auto;
 }
 
 .nav-button{
-    margin-bottom:50px;
-   
+    margin-top:10vh;
+    margin-bottom:20vh;
+}
 
+.nav-button:last-child{
+    margin-bottom:0;
 }
 
 
 .icon{
-    position:relative;
-    width: 80px; 
-    height: 80px; 
+    position:absolute;
+    height: 13vh; 
+    width: 13vh;
     border-radius: 50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
     opacity: 90%;
-    transition: opacity 0.3 s; 
-    
+    transition: opacity 0.1 s;
 }
 .red{
     background:linear-gradient(to right bottom, #f05757, #c90e0e);
@@ -133,7 +132,7 @@ cursor: pointer;
 }
 
 .yellow{
-    background-color:#f7cb0a;
+ 
     background:linear-gradient(to right bottom, rgb(247, 247, 134),rgb(255, 217, 0));
 }
 
@@ -141,16 +140,25 @@ cursor: pointer;
     display:inline-block;
     overflow:hidden;
     width:0;
-    transition: width 0.1s;
+    transition: width 0.2s;
     white-space: pre;
     color:#fff;
     font-weight:bold;
+    font-size:small;
+    position:absolute;  
+    left:0;
 }
 
 .icon:hover{
     opacity:100%;
+    transform: translate(-50%, -50%) scale(1.05)
 
 }
+
+.side-desc.hovered{
+    width:100px;
+}
+
 
 .thumbnail {  
     z-index:999; 
@@ -167,38 +175,20 @@ cursor: pointer;
 
 /*----------------------- CONTENT SECTION ------------------------*/
 
+
 .content-section{
-    float:right;
-    margin-left:20vw;
-    margin-right:20vw;
-    width:55%;
-    text-align:left;
-    position:relative;
-}
-
-
-.content-section h1{
-    margin-top:20px;
-    color:#fff;
-    font-weight:900;
-    font-size:4.5rem;
-    letter-spacing: 2px;
-    text-align:left;
-
-}
-
-.content-section p{
-    color:#fff
+    margin-top:12vh;
 }
 
 .portofolio-item{
-    border-top:#f7cb0a 2px dashed;
-    border-bottom:#f7cb0a 2px dashed;
+    border-top:rgb(255, 217, 0) 2px dashed;
+    border-bottom:rgb(255, 217, 0) 2px dashed;
     padding:20px;
 }
 
 .portofolio-item:first-child{
-    border-top:none;
+    border:none;
+    border:red;
     margin-top:10px;
 }
 
@@ -207,9 +197,9 @@ cursor: pointer;
     border-bottom:none;
 }
 
-.portofolio-item p{
-    font-size:large; 
+.portofolio-item p{ 
     font-weight:bold;  
+    margin-top:0;
 }
 
 .site-desc{
@@ -220,22 +210,22 @@ cursor: pointer;
 }
 
 .site-desc p{
-    font-size:medium;
     font-weight:400;
 }
 
 
-.slide-btn{
+.slide-btn, .slide-cv{
     background-color: transparent;
     border: none;
     color:#fff;
-    float: right;
-    font-size:large;
     font-weight:bold;
-    
 }
 
-.slide-btn:focus{
+.slide-btn{
+    float: right;
+}
+
+.slide-btn:focus, .slide-cv:focus, .navbar-toggle:focus{
     outline:none;
 }
 
@@ -243,8 +233,55 @@ cursor: pointer;
 .page-description{
     color:#fff;
     padding-top:20px;
-    font-size:larger;
 }
+
+.desc-content{
+    text-align:justify;
+}
+
+input, textarea{
+    max-width:100%;
+    box-sizing:border-box;
+    opacity:50%;
+    resize:none;
+    border:none;
+    border-radius:4px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+form{
+    margin-right:10px;
+    margin-top:1rem;
+}
+
+.form-control{
+    background-color:#f8f7f794;
+    color:#fff;
+}
+
+.btn{
+    background-color:#f8f7f794;
+    color:currentColor;
+    border:none;
+}
+
+.btn:hover{
+    background-color:#f8f7f7;
+    color:#1689b6;
+}
+
+.cv{
+    display:none;
+    width:100%;
+    border-radius:4px;
+    padding:20px;
+    overflow:hidden;
+
+}
+
+
+
 
 /*------------------- CONTROL PANEL -------------------------*/
 

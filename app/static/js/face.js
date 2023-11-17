@@ -9,7 +9,7 @@ myFace.addEventListener("mouseenter", function() {
 });
 
 myFace.addEventListener("mouseleave", function() {
-    image.src = originalSrc; // Restore the original image src
+    image.src = originalSrc;
     image.style.filter = "contrast(100%)";
 });
 
