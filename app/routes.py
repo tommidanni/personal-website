@@ -26,6 +26,9 @@ def receive_message():
      if request.method=='POST':
           try:
                data = request.get_json()
+               print(email)
+               print(message)
+               print("je suis passé par la")
                email = data['email']
                message=data['message']
                f = open("messages.txt" , "a")
