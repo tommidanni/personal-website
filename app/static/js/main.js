@@ -43,7 +43,6 @@ $(document).ready(function($){
     $(document).on('click', function(event) {
         var $navBar=$(".icon-section");
         if (!$(event.target).closest('.stretched-link').length && !$(event.target).closest('.navbar-toggle').length){
-            console.log("coucou");
             $navBar.removeClass("visible");
         }
       });

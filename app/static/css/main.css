@@ -4,7 +4,6 @@ body {
     font-family: Verdana, sans-serif;
     font-style: normal; 
     font-variant: normal; 
-    font-weight: 700; 
     font-size: 16px;
     overflow-x: hidden;
 
@@ -26,14 +25,16 @@ body::after {
 }
 
 h1{
-    margin-top:10px;
     color:#fff;
-    font-weight:700;
     font-size:3.5rem;
     text-align:left;
 
 }
 
+h2, h3{
+    color:#fff;
+    text-align:left;
+}
 p{
     color:#fff;
 }
@@ -186,16 +187,17 @@ a {
     padding:20px;
 }
 
-.portofolio-item:first-child{
-    border:none;
-    border:red;
-    margin-top:10px;
-}
-
 
 .portofolio-item:last-child{
     border-bottom:none;
 }
+
+.portofolio-item.first{
+    border-top:none;
+    margin-top:10px;
+}
+
+
 
 .portofolio-item p{ 
     font-weight:bold;  
@@ -262,7 +264,7 @@ form{
 
 .btn{
     background-color:#f8f7f794;
-    color:currentColor;
+    color:#1689b6;
     border:none;
 }
 
