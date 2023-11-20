@@ -32,7 +32,7 @@ def receive_message():
                print(email)
                print(message)
                print("je suis passé par la")
-               f = open("messages.txt" , "a")
+               f = open("/tmp/messages.txt" , "a")
                f.write(email)
                f.write('\r')
                f.write(message)
