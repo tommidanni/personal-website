@@ -1,10 +1,23 @@
 $(document).ready(function($){
-    $(".icon").mouseenter(function(){
-        $(this).closest(".row").find(".side-desc").addClass("hovered");
-    });
-    $(".icon").mouseleave(function(){
-        $(this).closest(".row").find(".side-desc").removeClass("hovered");
-    });
+
+
+    $(window).on('scroll',  _.debounce(function(){
+        $(".icon").removeClass('in-section');
+        $('#face').removeClass('in-section');
+        
+        $('.section').each(function(index, element){
+            var sectionId = $(element).attr('id');
+            var sectionName = sectionId.split('-')[1]; // Extract the second part of the section's ID
+            var correspondingIconId = '#' + sectionName; // Corresponding icon ID
+    
+            // Remove the class from all icons initially
+            const scrollTop = window.pageYOffset+window.outerHeight/2;
+            if ($(element).offset().top < scrollTop && $(element).offset().top + $(element).outerHeight() > scrollTop) {
+                $(correspondingIconId).addClass('in-section');
+            }
+        });
+    }, 10));
+
    
     $('.slide-btn').click(function() {
         var $row = $(this).closest('.row');
@@ -34,17 +47,6 @@ $(document).ready(function($){
             $(this).text('Hide');
         }
     });
-
-    $(".navbar-toggle").on("click", function(){
-        var $navBar=$(".icon-section");
-        $navBar.addClass("visible");
-    });
-
-    $(document).on('click', function(event) {
-        var $navBar=$(".icon-section");
-        if (!$(event.target).closest('.stretched-link').length && !$(event.target).closest('.navbar-toggle').length){
-            $navBar.removeClass("visible");
-        }
-      });
+      
 
 });

@@ -1,30 +1,338 @@
-{% extends "base.html" %}
-	{% block title %}Home{% endblock %}
-	{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
-			<div class="row title">
-				<div class="col-12">
-					<h1>Welcome !</h1>
-				</div>
-				
-			</div>
+	<!-- title -->
+	<title>Home</title>
 
-			<div class="row page-description ">
-				<div class="col-12">
-					<h2>I am Thomas Daniel, web developer full-stack.</h2>
-				</div>
-				<div class="col-11 d-flex justify-content-start text-left">
-					<p>Make your buisness visible online and get a website accessible from all devices with clean design.					Browse this website to know more about me and my work !</p>
-				</div>
-				
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
+
+	<!-- fontawesome !-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/favicon.png')}}">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <!-- main -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+	<!-- font -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+</head>
+<body>
+
+	<div id="loader" class="center"></div>
 					
-				</div>
-				<div class="col-md-8">
-				</div>
+	<div class="container-fluid">
+
+		<div class="row navbar" >
+			<div class="col-12">
+				<nav role="navigation">
+					<div class="d-flex flex-row">
+						<div class="nav-icon d-none d-md-block">
+							<a href="https://github.com/tommidanni" target="_blank"><img class="link-icon" src="{{url_for('static', filename='img/git.png')}}"></a>
+						</div>
+						<div class="nav-icon d-none d-md-block">
+							<a href="http://www.linkedin.com/in/tdaniel-webdev" target="_blank"><img class="link-icon" src="{{url_for('static', filename='img/linkedin.png')}}"></a>
+						</div>
+					</div>
+				</nav>
 			</div>
+		</div>
+	
+        
+        <div class="row mobile-navbar fixed-bottom d-sm-none align-item-start">
+            <div class="col-4">
+                <div class="icon text-center" id="red">
+                    <a href="#portofolio-red" class="stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="icon text-center" id="yellow">
+                    <a href="#about-yellow" class="stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="icon text-center" id="green">
+                    <a href="#contact-green" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+
+
+		<div class="row">
+			<div class="col-sm-2 d-none d-sm-block icon-section" role="navigation" >
+				    <div class="row	home-button">
+				    	<div class="col-12" >
+				    		<div class="face thumbnail d-flex align-items-center justify-content-center"  role="navigation">
+				    			<a href="#index-face" id="my-face" class="stretched-link"><img src="{{url_for('static', filename='img/face.png')}}" id="face" class="in-section"></a>			
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="row nav-button">
+				    	<div class="col-2 offset-5" >
+				    		<div class="icon" id="red" >
+				    			<a href="#portofolio-red" class="stretched-link"></a>
+				    		</div>
+				    	</div>
+                    
+				    </div>
+				    <div class="row nav-button">
+				    	<div class="col-2 offset-5" >
+				    		<div class="icon" id="yellow">
+				    			<a href="#about-yellow" class="stretched-link"></a>
+				    		</div>
+				    	</div>
+                    
+				    </div>
+				    <div class="row nav-button">
+				    	<div class="col-2 offset-5" >
+				    		<div class="icon" id="green">
+				    			<a href="#contact-green" class="stretched-link"></a>
+				    		</div>
+				    	</div>
+                    
+				    </div>	
+
+                    <div class="row">
+                        &nbsp
+                    </div>
+                
+			</div>
+
+
+            <!-- CONTENT SECTION -->
+
+			<div class="col-12 col-sm-10 col-md-8 offset-sm-2 content-section px-2 px-sm-3 px-md-5">
+
+                <section class="section" id="index-face">
+
+                <div class="row title">
+                    <div class="col-12">
+                        <h1>Thomas Daniel</h1>
+                    </div>
+                </div>
+    
+                <div class="row page-description">
+                    <div class="col-12">
+                        <h2>web developer full-stack</h2>
+                    </div>                
+                </div>
+                <div class="row sale-block mx-2 mx-md-3">
+
+                    <div class="col-12">
+                        <p>rien a dire</p>    
+                    </div>
+                    <div class="col-12">
+                        <p>rien a dire</p>    
+                    </div>
+                    <div class="col-12">
+                        <p>rien a dire</p>    
+                    </div>
+
+					<div class="col-12 justify-content-start text-left sale-section">
+						<div class="d-flex justify-content-center">
+							<h1 id="landing-btn" class="py-1 px-md-5 px-sm-3 px-1">Get started !</h1>
+						</div>
+					</div>
+                </div>
+
+            </section>
+
+            <section class="section" id="portofolio-red">
+
+        
+    
+                <div class="row title mt-auto">
+                    <div class="col-12">
+                        <h1>Portofolio</h1>
+                    </div>
+                </div>
+                <div class="row page-description">
+                    <div class="col d-flex justify-content-center">
+                        <p class="d-inline desc-content">All the source code is available on my GitHub page :</p><a href="https://github.com/tommidanni" target="_blank" class="d-inline"><img id="link-icon" src="{{url_for('static', filename='img/git.png')}}"></a>
+                    </div>
+                </div>
+                <div class="portofolio-item first">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>E-commerce application</p>
+                        </div>
+                        <div class="col">
+                            <p>See it !</p>
+                        </div>
+                        <div class="col">
+                            <button class="slide-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-11 site-desc">
+                        <p class="desc-content"><i>Standard e-commerce application with </i>cart system, payment system with e-mail confirmation <i>and</i> account management system.
+                                <i>Front end based on a </i>Bootstrap<i> template.  </i>
+                                </i>AJAX<i> filter system and cart system for better performances. 
+                                Product list managable by the owner through a database linked to the front-end.</i>
+                                This project contains all the basics functionnalities of an e-commerce application and can be adapted to any online buisness.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portofolio-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Landing page</p>
+                        </div>
+                        <div class="col">
+                            <p>See it !</p>
+                        </div>
+                        <div class="col">
+                            <button class="slide-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-11 site-desc">
+                            <p class="desc-content"><i>Landing page to get the e-mail of prospects. Owner can access the e-mail list
+                                through a database. Easy-to-use, instinctive design for potential clients.</i>
+                                Essential tool for every buisness looking for customers.
+                            </p>
+                        </div>
+                    </div>	
+                </div>
+    
+                <div class="portofolio-item">
+    
+                    <div class="row">
+                        <div class="col-6">
+                            <p>This site</p>
+                        </div>
+                        <div class="col">
+                            <p>See it !</p>
+                        </div>
+                        <div class="col">
+                            <button class="slide-btn">+</button>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-11 site-desc">
+                            <p class="desc-content"><i>Website speaks for itself...</i></p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </section>        
+
+            <section class="section" id="about-yellow">
+                <div class="row title">
+                    <div class="col-12">
+                        <h1>About me</h1>
+                    </div>
+                </div>	
+                    <div class="row page-description">
+                        <div class="col d-flex justify-content-start">
+                             <p class="desc-content">I am a young developer, searching for new challenges. After getting a
+                             master's degree in Applied Mathematics, I am now learning web development.
+                             I am passionate about sciences and programming but I am also an art lover.
+                             Designing websites allow me to fulfill all my interests.
+                        </br>
+                            I am looking forward to work on various projects. I can make your website from scratch,
+                            redesign it or just integrate an existing development team to bring my contribution to a bigger
+                            project. </p>
+        
+                        </div>
+                    </div>
+                    <div class="row page-description">
+                        <div class="col d-flex justify-content-start">
+                                <button class="slide-cv">See my curriculum</button>
+                        </div>
+                    </div>
+                    <div class="cv">
+        
+                        <div class="d-flex flex-column">
+                            <div class="col d-flex justify-content-start">
+                                <p><b>2019</b> : Mathematics Bachelor's degree</p>
+                            </div>
+                            <div class="col d-flex justify-content-start">
+                                <p><b>2020</b> : Computer Sciences Bachelor's degree</p>
+                            </div>
+                            <div class="col d-flex justify-content-start">
+                                <p><b>2023</b> : R&D Internship at AIRBUS</p>
+                            </div>
+                            <div class="col d-flex justify-content-start">
+                                <p><b>2023</b> : Applied Mathematics Master's degree (Sorbonne Université)</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="section" id="contact-green">
+                <div class="row title">
+                    <div class="col-12">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+                            <div class="row page-description">
+                                <div class="col d-flex justify-content-center">
+                                    <p class="desc-content">You can contact me by e-mail, via LinkedIn or directly on this website.</p> 
+                                </div>
+
+							</div>
+
+							<div class="row page-description d-flex justify-content-center">
+                                <div class="col-md-auto my-auto" >
+                                    <img src ="{{url_for('static', filename='img/mail_icon.png')}}"class="d-inline" id="link-icon">
+                                    <p class="d-inline">tdaniel.webdev@gmail.com</p>
+                                </div>
+                                <div class="col-md-auto" >	
+                                    <a  class="d-inline " href="#"><img class="link-icon" src="{{url_for('static', filename='img/full_linkedin.png')}}" ></a></li>
+                                </div>
+                            </div>
+            
+                            <div class="row" id="form-section">
+                                <div class="col-12">
+                                    <form>
+                                        <div class="form-group">
+                                            <input  class="form-control" id="mail-input" placeholder="Your email adress">
+                                            <textarea class="form-control"  id="message-input" rows="5" placeholder="What do you need ?"></textarea>
+                                            <button class="btn btn-primary" id="submit-btn">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                                
+            
+            </section>
+
+			</div>
+            <div class="col-md-2 d-none d-md-block empty-section">&nbsp</div>
+		</div>
+
+		<!-- jquery js -->
+		<script src="{{url_for('static', filename='js/jquery-3.7.11.js')}}"></script>	
+		<!-- main js-->
+		<script src="{{url_for('static', filename='js/main.js')}}"></script>	
+		<!-- image js -->
+		<script src="{{url_for('static', filename='js/image.js')}}"></script>	
+		<!--face animation js-->
+		<script src="{{url_for('static', filename='js/face.js')}}"></script>	
+		<!-- contact js-->
+		<script src="{{url_for('static', filename='js/contact.js')}}"></script>	
+		<!-- loading js -->
+		<script src="{{url_for('static', filename='js/loading.js')}}"></script>	
+        <!-- scrolling js -->
+		<script src="{{url_for('static', filename='js/scrolling.js')}}"></script>
+        <!-- lodash js -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+	
 		
-	{% endblock %}
+		
+	</body>
+
+	</html>
