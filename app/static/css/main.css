@@ -216,20 +216,19 @@ a {
 
     .in-section:not(#face){
         opacity:100%;
-        transform:translate (-50%, -50%) scale(1.1);
+        transform:translate (-50%, -50%) scale(1.05);
     }
 
 }
-#red{
+#red, #red-m{
     background:linear-gradient(to right bottom, #f05757, var(--my-red));
 }
 
-#green{
+#green, #green-m{
     background:linear-gradient(to right bottom, #b1f37a,var(--my-green));
 }
 
-#yellow{
- 
+#yellow, #yellow-m{
     background:linear-gradient(to right bottom, rgb(247, 247, 134),var(--my-yellow));
 }
 
