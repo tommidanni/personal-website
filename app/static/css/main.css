@@ -312,13 +312,20 @@ a {
 
 }
 
-
 .section:last-of-type{
-
     border-bottom:4px solid var(--elec-green);
     border-bottom-right-radius:45px;
     border-bottom-left-radius:45px;
     margin-bottom:5vh;
+}
+
+.section:not(:first-of-type){
+    padding-top:8vh;
+}
+
+
+#portofolio-red{
+    padding-bottom:8vh;
 }
 .mt-auto{
     margin-top:auto;
