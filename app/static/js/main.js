@@ -1,6 +1,5 @@
 $(document).ready(function($){
-
-
+    
     $(window).on('scroll',  _.debounce(function(){
         $(".icon").removeClass('in-section');
         $('#face').removeClass('in-section');
@@ -14,8 +13,6 @@ $(document).ready(function($){
             const scrollTop = window.pageYOffset+window.outerHeight/2;
             if ($(element).offset().top < scrollTop && $(element).offset().top + $(element).outerHeight() > scrollTop) {
                 $(correspondingIconId).addClass('in-section');
-                console.log(correspondingIconId)
-                console.log($(correspondingIconId).attr('class'));
             }
         });
     }, 10));
@@ -49,6 +46,7 @@ $(document).ready(function($){
             $(this).text('Hide');
         }
     });
-      
+
+ 
 
 });
