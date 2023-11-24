@@ -1,40 +1,44 @@
 
 :root{
-    --primary-color:#001f2b;
-    --secondary-color:#009bd6;
+    --primary-color:#000000;
+    --secondary-color:white;
     --third-color:rgba(23, 117, 117, 0.459);;
     --fourth-color:#C4C4C4;
     --fifth-color:#47972f;
     --blue-jeans: #5DADE2;
-    --my-red: #c90e0e;
-    --my-yellow: rgb(255, 217, 0);
-    --my-green:#40df10;
-    --my-opac:
+
+    --elec-green:#306909;
 
 }
 
 body {
-    font-family: Verdana, sans-serif;
+    font-family: andale mono, monospace;
     font-style: normal; 
     font-variant: normal; 
     font-size: 16px;
     overflow: hidden;
     width: 100vw;
     height:100vh;    
-    max-width: 100%;
-    background-color:var(--primary-color);
+    max-width: 100%;      
+    background-attachment: fixed;
+    background-color:black;
     text-align:center;
     overflow: auto;
 }
 
 
 
-body::after {
-    content: url('../img/background_2.png');
-    display: none;
+
+.hidden{
+    visibility:hidden;
+}
+.show{
+    visibility:visible;
 }
 
-h1{
+h1:not(#landing-btn){
+
+    font-weight: bold;
     color:white;
     font-size:3.5rem;
     text-align:center;
@@ -42,7 +46,9 @@ h1{
     word-wrap: break-word;
     overflow-wrap: break-word;
 
+
 }
+
 
 h2, h3{
     color:white;
@@ -89,10 +95,7 @@ p{
 /*-----------------------NAVIGATION BAR SECTION --------------------*/
 
 
-.navbar{
-    background-color: var(--primary-color);
 
-}
 .nav-icon{
     margin-top:8px;
     margin-right:8px;
@@ -123,23 +126,25 @@ a {
 
 
 .icon-section{
-    border-top-right-radius:15px;
-    background-color: var(--secondary-color);
     padding:4vh;
+    border-top-right-radius:45px;
+    z-index:1;
     position:fixed;
-    left:0;
-    z-index:999;
+    overflow:hidden;
 }
 
-
 .empty-section{
-    border-top-left-radius:15px;
-    background-color: var(--secondary-color); 
     position:fixed;
-    right:0;
+    z-index:1;
+    overflow:hidden;
+    border-top-left-radius:45px;
+    background:white;
+    right:0;    
+    padding:0;
     height:100vh;
     display: block;
 }
+
 
 
 .face img { 
@@ -169,18 +174,14 @@ a {
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
-        transition: transform 0.1s ease;
-        opacity: 80%;
-        transition: opacity 0.1 s;
+        transition: transform 0.05s ease;
     }
 
     .icon:hover{
-        opacity:100%;
         transform: translate(-50%, -50%) scale(1.1)
     }
 
     .in-section:not(#face){
-        opacity:100%;
         transform: translate(-50%, -50%) scale(1.1);
     }
     
@@ -203,9 +204,7 @@ a {
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
-        transition: transform 0.1s ease-in;
-        opacity: 80%;
-        transition: opacity 0.1 s;
+        transition: transform 0.05s ease-in;
 
     }
 
@@ -221,15 +220,18 @@ a {
 
 }
 #red, #red-m{
-    background:linear-gradient(to right bottom, #f05757, var(--my-red));
+    background:linear-gradient(to right bottom, rgb(255, 62, 62), red);
+  
 }
 
 #green, #green-m{
-    background:linear-gradient(to right bottom, #b1f37a,var(--my-green));
+    background:linear-gradient(to right bottom,rgb(39, 150, 39),  green);
+   
 }
 
 #yellow, #yellow-m{
-    background:linear-gradient(to right bottom, rgb(247, 247, 134),var(--my-yellow));
+    background:linear-gradient(to right bottom, rgb(88, 88, 248),blue);
+   
 }
 
 .thumbnail {  
@@ -244,6 +246,8 @@ a {
 .thumbnail:hover { 
     transform: scale(1.05); 
 }
+
+
 
 
 
@@ -263,10 +267,12 @@ a {
 
 /*----------------------- CONTENT SECTION ------------------------*/
 
+
 .sale-block{
     margin-top:5vh;
-    background-color:#c4c4c4e1;
     border-radius:8px;
+    background-color:rgb(219, 218, 218);
+
     padding:8vh;
     transition: background-color 0.3s ease;
     transition: box-shadow 0.3s ease;
@@ -276,10 +282,10 @@ a {
 }
 
 .sale-block:hover{
-    background-color:var(--fourth-color);
+    background-color:white;
+
     box-shadow: 2px 2px 4px #001118;
-    transform: scale(1.005);
-    
+    transform: scale(1.005);    
 }
 
 .sale-block p{
@@ -292,19 +298,36 @@ a {
 }
 .section{
     min-height:100vh;
+    border-left:4px solid var(--elec-green);
+    border-right:4px solid var(--elec-green);
+    padding-left:20px;
+    padding-right:20px;
 }
 
+.section:first-of-type{
+    padding-top:10vh;
+    border-top:4px solid var(--elec-green);
+    border-top-right-radius:45px;
+    border-top-left-radius:45px;
+
+}
+
+
+.section:last-of-type{
+
+    border-bottom:4px solid var(--elec-green);
+    border-bottom-right-radius:45px;
+    border-bottom-left-radius:45px;
+    margin-bottom:5vh;
+}
 .mt-auto{
     margin-top:auto;
 }
-.content-section{
-    padding-top:10vh;
-    background-color:var(--primary-color);
-}
+
 
 .portofolio-item{
-    border-top:var(--my-yellow) 2px dashed;
-    border-bottom: var(--my-yellow) 2px dashed;
+    border-top:var(--elec-green) 2px dashed;
+    border-bottom: var(--elec-green) 2px dashed;
     padding:20px;
 }
 
@@ -403,15 +426,11 @@ form{
 
 }
 
-
-
-
 #landing-btn{
     border-radius:4px;
     background-color:var(--third-color);
     color:var(--primary-color);
     font-size:larger;
-    
     transition: transform 0.05s ease-in-out;
 }
 

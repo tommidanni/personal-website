@@ -26,7 +26,13 @@
 </head>
 <body>
 
+
+
 	<div id="loader" class="center"></div>
+
+    <div class="noise-container">
+
+
 					
 	<div class="container-fluid">
 
@@ -46,7 +52,7 @@
 		</div>
 	
         
-        <div class="row mobile-navbar fixed-bottom d-sm-none align-item-start">
+        <div class="row mobile-navbar fixed-bottom d-sm-none align-item-start ">
             <div class="col-4">
                 <div class="icon text-center" id="red-m">
                     <a href="#portofolio-red" class="stretched-link"></a>
@@ -66,8 +72,13 @@
 
 
 		<div class="row">
-			<div class="col-sm-2 d-none d-sm-block icon-section" role="navigation" >
-				    <div class="row	home-button">
+			<div class="col-sm-2 d-none d-sm-block icon-section display-first " role="navigation" >
+                <svg id="left-background" width="100%" height="100%" style="position: absolute; top:0; left:0; z-index: 0;">
+                    <!-- Your SVG content for the background -->
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <!-- Add more SVG elements for your background -->
+                  </svg>
+			        <div class="row	home-button">
 				    	<div class="col-12" >
 				    		<div class="face thumbnail d-flex align-items-center justify-content-center"  role="navigation">
 				    			<a href="#index-face" id="my-face" class="stretched-link"><img src="{{url_for('static', filename='img/face.png')}}" id="face" class="in-section"></a>			
@@ -102,25 +113,26 @@
                     <div class="row">
                         &nbsp
                     </div>
-                
 			</div>
+
+
 
 
             <!-- CONTENT SECTION -->
 
-			<div class="col-12 col-sm-10 col-md-8 offset-sm-2 content-section px-2 px-sm-3 px-md-5">
+			<div class="col-12 col-sm-10 col-md-8 offset-sm-2 content-section px-2 px-sm-3 px-md-5  display-second">
 
                 <section class="section" id="index-face">
 
                 <div class="row title">
                     <div class="col-12">
-                        <h1>Thomas Daniel</h1>
+                        <h1 class="mx-5">THOMAS DANIEL</h1>
                     </div>
                 </div>
     
                 <div class="row page-description">
                     <div class="col-12">
-                        <h2>web developer full-stack</h2>
+                        <h2>WEB DEVELOPER FULL-STACK</h2>
                     </div>                
                 </div>
                 <div class="row sale-block mx-2 mx-md-3">
@@ -137,7 +149,7 @@
 
 					<div class="col-12 justify-content-start text-left sale-section">
 						<div class="d-flex justify-content-center">
-							<h1 id="landing-btn" class="py-1 px-md-5 px-sm-3 px-1">Get started !</h1>
+							<h1 id="landing-btn" class="py-1 px-md-5 px-sm-3 px-1">GET STARTED !</h1>
 						</div>
 					</div>
                 </div>
@@ -150,7 +162,7 @@
     
                 <div class="row title mt-auto">
                     <div class="col-12">
-                        <h1>Portofolio</h1>
+                        <h1 class="mx-5">PORTOFOLIO</h1>
                     </div>
                 </div>
                 <div class="row page-description">
@@ -164,7 +176,7 @@
                             <p>E-commerce application</p>
                         </div>
                         <div class="col">
-                            <p>See it !</p>
+                            <p>WIP</p>
                         </div>
                         <div class="col">
                             <button class="slide-btn">+</button>
@@ -172,7 +184,7 @@
                     </div>
                     <div class="row">
                         <div class="col-11 site-desc">
-                        <p class="desc-content"><i>Standard e-commerce application with </i>cart system, payment system with e-mail confirmation <i>and</i> account management system.
+                        <p class="desc-content">WIP : visible on my github page. <i>Standard e-commerce application with </i>cart system, payment system with e-mail confirmation <i>and</i> account management system.
                                 <i>Front end based on a </i>Bootstrap<i> template.  </i>
                                 </i>AJAX<i> filter system and cart system for better performances. 
                                 Product list managable by the owner through a database linked to the front-end.</i>
@@ -186,7 +198,7 @@
                 <div class="portofolio-item">
                     <div class="row">
                         <div class="col-6">
-                            <p>Landing page</p>
+                            <p>WIP</p>
                         </div>
                         <div class="col">
                             <p>See it !</p>
@@ -232,7 +244,7 @@
             <section class="section" id="about-yellow">
                 <div class="row title">
                     <div class="col-12">
-                        <h1>About me</h1>
+                        <h1 class="mx-5">ABOUT ME</h1>
                     </div>
                 </div>	
                     <div class="row page-description">
@@ -275,7 +287,7 @@
             <section class="section" id="contact-green">
                 <div class="row title">
                     <div class="col-12">
-                        <h1>Contact</h1>
+                        <h1 class="mx-5">CONTACT</h1>
                     </div>
                 </div>
                             <div class="row page-description">
@@ -309,10 +321,16 @@
                                 
             
             </section>
-
 			</div>
-            <div class="col-md-2 d-none d-md-block empty-section">&nbsp</div>
+            <div class="col-md-2 d-none d-md-block empty-section display-first ">
+                <svg width="100%" height="100%" style="position: absolute; top:0; left:0; z-index: 0;">
+                    <!-- Your SVG content for the background -->
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <!-- Add more SVG elements for your background -->
+                  </svg>
+            </div>
 		</div>
+        </div>
 
 		<!-- jquery js -->
 		<script src="{{url_for('static', filename='js/jquery-3.7.11.js')}}"></script>	
@@ -330,7 +348,8 @@
 		<script src="{{url_for('static', filename='js/scrolling.js')}}"></script>
         <!-- lodash js -->
         <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-	
+	    <!-- background js -->
+		<script src="{{url_for('static', filename='js/background.js')}}"></script>
 		
 		
 	</body>
